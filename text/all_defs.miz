@@ -1,0 +1,743 @@
+:: Examples of all definitions
+
+environ
+
+ vocabularies TARSKI, XBOOLE_0, ZFMISC_1, RELAT_1, FINSET_1;
+ notations RELAT_1;
+ constructors RELAT_1;
+ registrations RELAT_1;
+
+begin :: Predicates
+
+::$N Definition of a predicate with a simple definiens
+definition
+  let X,Y be set;
+  pred X c= Y means
+  1 = 1;
+  reflexivity;
+end;
+
+::$N Definition of a predicate with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  pred X c= Y means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  symmetry;
+end;
+
+::$N Definition of a predicate with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  pred X c= Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  symmetry;
+end;
+
+::$N Definition of a predicate with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  pred X c= Y means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a predicate with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  pred X c= Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+begin :: Attributes without arguments
+
+::$N Definition of an attribute with a simple definiens
+definition
+  let X be set;
+  attr X is finite means
+  1 = 1;
+end;
+
+::$N Definition of an attribute with a complex definiens (1 case) with otherwise
+definition
+  let X be set;
+  attr X is finite means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (3 cases) with otherwise
+definition
+  let X be set;
+  attr X is finite means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (1 case) without otherwise
+definition
+  let X be set;
+  attr X is finite means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (3 cases) without otherwise
+definition
+  let X be set;
+  attr X is finite means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+
+begin :: Attributes with arguments
+
+::$N Definition of an attribute with a simple definiens
+definition
+  let X,Y be set;
+  attr Y is X -valued means
+  1 = 1;
+end;
+
+::$N Definition of an attribute with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  attr Y is X -valued means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  attr Y is X -valued means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  attr Y is X -valued means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of an attribute with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  attr Y is X -valued means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+
+begin :: Modes - non expandable without specification type
+
+::$N Definition of a mode with a simple definiens
+definition
+  let X,Y be set;
+  mode Relation of X,Y means
+  1 = 1;
+  existence;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a mode with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+
+begin :: Modes - non expandable with a specification type
+
+::$N Definition of a mode with a simple definiens
+definition
+  let X,Y be set;
+  mode Relation of X,Y -> set means
+  1 = 1;
+  existence;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y -> object means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  sethood;
+end;
+
+::$N Definition of a mode with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y -> set means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a mode with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  mode Relation of X,Y -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+begin :: Modes - expandable
+
+::$N Definition of a mode without arguments
+definition
+  mode Relation is Relation-like set;
+end;
+
+::$N Definition of a mode with arguments
+definition
+  let X,Y be set;
+  mode Relation of X,Y is Relation-like set;
+end;
+
+
+
+
+begin :: Functors - infix predicative without specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func X \/ Y means
+  1 = 1;
+  existence;
+  uniqueness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+begin :: Functors - infix predicative with a specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func X \/ Y -> set means
+  1 = 1;
+  existence;
+  uniqueness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+begin :: Functors - infix equational without specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func X \/ Y equals
+  1;
+  coherence;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y equals
+  1 if 1 = 1
+  otherwise 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3
+  otherwise 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y equals
+  1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+
+begin :: Functors - infix equational with a specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func X \/ Y -> set equals
+  1;
+  coherence;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set equals
+  1 if 1 = 1
+  otherwise 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3
+  otherwise 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set equals
+  1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func X \/ Y -> set equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+begin :: Functors - circumfix predicative without specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func [:X,Y:] means
+  1 = 1;
+  existence;
+  uniqueness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+begin :: Functors - circumfix predicative with a specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set means
+  1 = 1;
+  existence;
+  uniqueness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set means
+  1 = 1 if 1 = 1
+  otherwise 2 = 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3
+  otherwise 4 = 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set means
+  1 = 1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set means
+  1 = 1 if 1 = 1,
+  2 = 2 if 2 = 2,
+  3 = 3 if 3 = 3;
+  correctness;
+end;
+
+
+begin :: Functors - circumfix equational without specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func [:X,Y:] equals
+  1;
+  coherence;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] equals
+  1 if 1 = 1
+  otherwise 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3
+  otherwise 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] equals
+  1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3;
+  correctness;
+end;
+
+
+
+
+
+begin :: Functors - circumfix equational with a specification type
+
+::$N Definition of a functor with a simple definiens
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set equals
+  1;
+  coherence;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set equals
+  1 if 1 = 1
+  otherwise 2;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) with otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3
+  otherwise 4;
+  correctness;
+  commutativity;
+  idempotence;
+end;
+
+::$N Definition of a functor with a complex definiens (1 case) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set equals
+  1 if 1 = 1;
+  correctness;
+end;
+
+::$N Definition of a functor with a complex definiens (3 cases) without otherwise
+definition
+  let X,Y be set;
+  func [:X,Y:] -> set equals
+  1 if 1 = 1,
+  2 if 2 = 2,
+  3 if 3 = 3;
+  correctness;
+end;
+
