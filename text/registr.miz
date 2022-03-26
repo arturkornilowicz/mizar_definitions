@@ -1,9 +1,9 @@
 environ
 
- vocabularies XBOOLE_0, FUNCT_1, SUBSET_1, ZFMISC_1, FINSET_1, NUMBERS,
-   MEMBERED, MEMBER_1;
+ vocabularies XBOOLE_0, FUNCT_1, SUBSET_1, ZFMISC_1, FINSET_1, MEMBERED,
+   MEMBER_1;
  notations XBOOLE_0, ZFMISC_1, SUBSET_1, RELAT_1, FUNCT_1, RELSET_1,
-   FINSET_1, NUMBERS, MEMBERED, XXREAL_0, MEMBER_1;
+   FINSET_1, MEMBERED, MEMBER_1;
  constructors RELSET_1, FUNCT_1, FINSET_1, MEMBER_1;
  registrations XBOOLE_0, RELAT_1, FUNCT_1, PARTFUN1, RELSET_1, FINSET_1,
    CARD_1, MEMBERED;
@@ -15,21 +15,18 @@ begin :: Existential registrations
 registration
   cluster empty for set;
   existence;
-::>       *4
 end;
 
 ::$N Existential registration with two adjectives
 registration
   cluster non empty finite for set;
   existence;
-::>       *4
 end;
 
 ::$N Existential registration with several adjectives
 registration
   cluster non empty finite one-to-one for Function;
   existence;
-::>       *4
 end;
 
 begin :: Conditional registrations
@@ -39,7 +36,6 @@ registration
   let A be empty set;
   cluster -> empty for Subset of A;
   coherence;
-::>       *4
 end;
 
 ::$N Conditional 0-2 registration
@@ -53,7 +49,6 @@ end;
 registration
   cluster -> empty finite one-to-one for Function;
   coherence;
-::>       *4,4,4
 end;
 
 ::$N Conditional 1-1 registration
@@ -89,7 +84,6 @@ registration
   let A,B be non empty set;
   cluster [:A,B:] -> non empty;
   coherence;
-::>       *4
 end;
 
 ::$N Functorial registration with two non negated adjectives
@@ -111,7 +105,6 @@ registration
   let A,B be infinite set;
   cluster A \/ B -> non finite for set;
   coherence;
-::>       *4
 end;
 
 begin :: Others
@@ -122,7 +115,6 @@ registration
   let B be Subset of A;
   reduce A \/ B to A;
   reducibility;
-::>          *4
 end;
 
 ::$N Identification without when
@@ -130,7 +122,6 @@ registration
   let A,B be set;
   identify A \/ B with A /\ B; 
   compatibility;
-::>           *4
 end;
 
 ::$N Identification with one when
@@ -138,7 +129,6 @@ registration
   let A be real-membered set, F be ext-real-membered set;
   identify --A with --F when A = F;
   compatibility;
-::>           *4
 end;
 
 ::$N Identification with two when's
@@ -146,8 +136,5 @@ registration
   let A, B be real-membered set, F, G be ext-real-membered set;
   identify A++B with F++G when A = F, B = G;
   compatibility;
-::>           *4
 end;
 
-::>
-::> 4: This inference is not accepted
